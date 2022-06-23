@@ -47,7 +47,7 @@
       <input type="password"  name="senha" class="form-control mt-3" placeholder="Digite a Senha" required>
       <label for="inputPassword" class="sr-only">Confirmar a Senha</label>
       <input type="password" name="senhaC" class="form-control mt-3" placeholder="Confirmar a senha" required>
-      <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" value="Cadastro">Cadastro</button>
+      <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro" value="Cadastro">Cadastro</button>
       <p class="mt-5 mb-3"><a href="../index.php">Voltar</a></p>
       <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
   </body>
