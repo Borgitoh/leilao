@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 26-Jun-2022 às 15:02
+-- Tempo de geração: 26-Jun-2022 às 16:31
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `leilao`
 --
+CREATE DATABASE IF NOT EXISTS `leilao` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `leilao`;
 
 -- --------------------------------------------------------
 
