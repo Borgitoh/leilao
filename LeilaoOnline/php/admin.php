@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'sair.php';
 include 'validasessao.php';
 
 ?>

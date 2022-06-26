@@ -39,7 +39,7 @@ include "conexao.php";
             <label for="inputPassword" class="sr-only">Confirmar a Senha</label>
             <input type="password" name="senhaC" class="form-control mt-3" placeholder="Confirmar a senha" required>
             <?php
-              if( $_SESSION['idTipoUsario']  == 1){
+              if(!empty( $_SESSION['idTipoUsario']  == 1)){
                 $sql="SELECT*FROM `tipousuario` WHERE nome != 'Usuario' ";
                 $resultado=mysqli_query($con,$sql);  
             ?>
@@ -58,7 +58,7 @@ include "conexao.php";
              }
             ?>
             <?php 
-             if(!isset($_SESSION['idTipoUsario'])){
+             if(empty($_SESSION['idTipoUsario'])){
             ?>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro"
                 value="Cadastro">Cadastro</button>
