@@ -33,9 +33,7 @@
         }
 }
 if(isset($_POST['Cadastro'])){
- 
-
-  
+   
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
@@ -44,7 +42,19 @@ if(isset($_POST['Cadastro'])){
         VALUES('$nome','$email','$senha','3')";
       
       $resultado=mysqli_query($con,$sql);
-      // header('location:index.php?msg=sucessoLogin');
-  
+      header('location: ../index.php');
 }
+if(isset($_POST['CadastroFu'])){
+   
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $tipo  = $_POST['funcionario'] ;
+
+        $sql = "INSERT INTO usuario (nome,email,senha,IdTipoUsuario) 
+        VALUES('$nome','$email','$senha','3')";
+      $resultado=mysqli_query($con,$sql);
+      header('location: admin.php');
+}
+
 ?>

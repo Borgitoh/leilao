@@ -39,21 +39,33 @@ include "conexao.php";
             <label for="inputPassword" class="sr-only">Confirmar a Senha</label>
             <input type="password" name="senhaC" class="form-control mt-3" placeholder="Confirmar a senha" required>
             <?php
-              if($_SESSION['id']  == 1){
-                $sql="select * from tipousuario where nome != Usuario";
-                $resultado=mysqli_query($con,$sql);
-                while($row=mysqli_fetch_assoc($resultado)){
+              if( $_SESSION['idTipoUsario']  == 1){
+                $sql="SELECT*FROM `tipousuario` WHERE nome != 'Usuario' ";
+                $resultado=mysqli_query($con,$sql);  
             ?>
-            <select class="form-control mt-3" id="exampleFormControlSelect1" name="funcinario">
-                <option value= "<?php echo $row['IdTipoUsuario']?>"><?php echo $row['nome']?></option>
+            <select class="form-control mt-3" id="exampleFormControlSelect1" name="funcionario">
+                <?php   while( $row=mysqli_fetch_assoc($resultado)){ ?>
+                <option value="<?php echo $row['IdTipoUsuario']?>"><?php echo $row['nome']?></option>
+                <?php
+                  }
+                ?>
             </select>
-            <?php
-              } 
-            }
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="CadastroFu"
+                value="CadastroFu">Cadastro</button>
+            <p class="mt-5 mb-3"><a href="admin.php">Voltar</a></p>
+            <?php 
+            
+             }
+            ?>
+            <?php 
+             if(!$_SESSION['idTipoUsario']){
             ?>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro"
                 value="Cadastro">Cadastro</button>
             <p class="mt-5 mb-3"><a href="../index.php">Voltar</a></p>
+            <?php 
+             }
+            ?>
             <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
         </form>
     </div>
