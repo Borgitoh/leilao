@@ -13,14 +13,16 @@
           if(!empty($row)){
             $_SESSION['nome'] = $row['nome'];
             $_SESSION['email'] = $row['email'];
-            $_SESSION['id'] = $row['Idsuario'];
-            $_SESSION[id] = $row['idTipoUsuario'];
-            if($row['idTipoUsuario']= 1 || $row['idTipoUsuario']= 2) 
-             header("Location: admin.php");
-             else
-               header("Location: ../index.php");
+            $_SESSION['idusuario'] = $row['Idusario'];
+            $_SESSION['idTipoUsario'] = $row['IdTipoUsuario'];
+            if($row['IdTipoUsuario'] == 1 || $row['IdTipoUsuario']== 2) { 
+                header("Location: admin.php"); 
+            }
+          if($row['IdTipoUsuario']== 3){
+                header("Location: ../index.php"); 
+            }
         }
-           else {
+        else {
             unset($_SESSION['nome']);
             unset($_SESSION['email']);
             unset($_SESSION['id']);

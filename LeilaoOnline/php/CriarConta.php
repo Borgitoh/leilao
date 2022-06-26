@@ -1,7 +1,7 @@
 <!doctype html>
 <?php 
 session_start();
-
+include "conexao.php";
 ?>
 <html lang="en">
 
@@ -39,19 +39,17 @@ session_start();
             <label for="inputPassword" class="sr-only">Confirmar a Senha</label>
             <input type="password" name="senhaC" class="form-control mt-3" placeholder="Confirmar a senha" required>
             <?php
-              if(  $_SESSION == 1){
-
-              
+              if($_SESSION['id']  == 1){
+                $sql="select * from tipousuario where nome != Usuario";
+                $resultado=mysqli_query($con,$sql);
+                while($row=mysqli_fetch_assoc($resultado)){
             ?>
-            <select class="form-control mt-3" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <select class="form-control mt-3" id="exampleFormControlSelect1" name="funcinario">
+                <option value= "<?php echo $row['IdTipoUsuario']?>"><?php echo $row['nome']?></option>
             </select>
             <?php
               } 
+            }
             ?>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro"
                 value="Cadastro">Cadastro</button>
