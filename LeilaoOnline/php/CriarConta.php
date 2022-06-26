@@ -45,7 +45,7 @@ include "conexao.php";
             ?>
             <select class="form-control mt-3" id="exampleFormControlSelect1" name="funcionario">
                 <?php   while( $row=mysqli_fetch_assoc($resultado)){ ?>
-                <option value="<?php echo $row['IdTipoUsuario']?>"><?php echo $row['IdTipoUsuario']?></option>
+                <option value="<?php echo $row['IdTipoUsuario']?>"><?php echo $row['nome']?></option>
                 <?php
                   }
                 ?>
