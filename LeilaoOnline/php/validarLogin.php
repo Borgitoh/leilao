@@ -19,7 +19,7 @@
                 header("Location: admin.php"); 
             }
           if($row['IdTipoUsuario']== 3){
-                header("Location: ../index.php"); 
+                header("Location: ../login.php"); 
             }
         }
         else {
