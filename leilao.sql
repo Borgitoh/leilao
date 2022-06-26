@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22-Jun-2022 às 19:50
+-- Tempo de geração: 26-Jun-2022 às 15:02
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -58,14 +58,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `IdTipoUsuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`Idusario`),
   KEY `IdTipoUsuario` (`IdTipoUsuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
 INSERT INTO `usuario` (`Idusario`, `nome`, `email`, `senha`, `IdTipoUsuario`) VALUES
-(1, 'Kene', 'dumilde.matos@gmail.com', 'dumilde@123', 3);
+(1, 'Kene', 'dumilde.matos@gmail.com', 'dumilde@123', 3),
+(2, 'ADMIN', 'admin@gmail.com', '123123aA', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
