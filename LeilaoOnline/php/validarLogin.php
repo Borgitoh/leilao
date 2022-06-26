@@ -19,7 +19,7 @@
                 header("Location: admin.php"); 
             }
           if($row['IdTipoUsuario']== 3){
-                header("Location: ../login.php"); 
+                header("Location: ../index.php"); 
             }
         }
         else {
@@ -42,7 +42,7 @@ if(isset($_POST['Cadastro'])){
         VALUES('$nome','$email','$senha','3')";
       
       $resultado=mysqli_query($con,$sql);
-      header('location: ../index.php');
+      header('location: ../login.php');
 }
 if(isset($_POST['CadastroFu'])){
    
