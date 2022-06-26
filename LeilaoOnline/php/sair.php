@@ -4,6 +4,6 @@ if (isset($_GET['sessao'])){
     session_destroy();
 }
  if(!$_SESSION['nome']){
-        header("Location: ../login.php");
+        header("Location: ../index.php");
       }
 ?>
