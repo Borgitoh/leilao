@@ -4,30 +4,30 @@
     $email = $_POST['email'];
     $senha= $_POST['senha'];
     
-    $mysqli= "SELECT*FROM `usuario` WHERE email = '$email'";
+    $mysqli= "SELECT*FROM `usuario` WHERE email = '$email' and senha = '$senha' ";
     
     $resultado=mysqli_query($con,$mysqli);
-    $row = mysqli_fetch_array($resultado);
-    echo  $row['nome'];
-    //     if($resultado){
-    //       session_start();
-    //      
-        //   if(!empty($row)){
-        //     $_SESSION['nome'] = $row['nome'];
-        //     $_SESSION['email'] = $row['email'];
-        //      echo  $row['nome'];
-        //     // header("Location: home.php");
-        //     //header("Location: visualizar.php");
-        //   }
-        // //   else {
-        //     unset($_SESSION['nome']);
-        //     unset($_SESSION['email']);
-        //     unset($_SESSION['id']);
-        //     unset($_SESSION['cargo']);
-        //     header("Location: login.php?msg=LOGIN_ERROR");}
-        // }else{
-        //     header("Location: login.php?msg=ERRO");
-        // }
+        if($resultado){
+          session_start();
+           $row = mysqli_fetch_array($resultado);
+          if(!empty($row)){
+            $_SESSION['nome'] = $row['nome'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['id'] = $row['Idsuario'];
+            if($row['idTipoUsuario']= 1 || $row['idTipoUsuario']= 2) 
+             header("Location: admin.php");
+             else
+               header("Location: ../index.php");
+        }
+           else {
+            unset($_SESSION['nome']);
+            unset($_SESSION['email']);
+            unset($_SESSION['id']);
+            unset($_SESSION['cargo']);
+            header("Location: ../login.php?msg=LOGIN_ERROR");}
+        }else{
+            header("Location: login.php?msg=ERRO");
+        }
 }
 if(isset($_POST['Cadastro'])){
  
@@ -44,5 +44,4 @@ if(isset($_POST['Cadastro'])){
       // header('location:index.php?msg=sucessoLogin');
   
 }
-
 ?>
