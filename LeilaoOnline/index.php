@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +31,11 @@
        <li class="nav-item">
         <a class="nav-link">Resultado</a>
       </li>
+      <?php   if( !$_SESSION['idTipoUsario']){?>
       <li class="nav-item">
         <a class="nav-link" href="login.php">Login</a>
       </li>
+      <?php }?>
     </ul>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Procurar">
