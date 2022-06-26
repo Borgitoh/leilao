@@ -75,14 +75,17 @@ include "conexao.php";
   <tbody>
     <?php
       $id = $_SESSION['idusuario'];
-     $mysqli= "SELECT*FROM `usuario` WHERE email != '$id'ORDER by 1 desc ";
+      $mysqli= "SELECT usuario.nome, usuario.email, tipousuario.nome as tipousuario  
+        FROM `usuario` INNER JOIN tipousuario 
+        ON usuario.IdTipoUsuario = tipousuario.IdTipoUsuario
+         WHERE Idusario != '$id'ORDER by 1 desc ";
      $resultado=mysqli_query($con,$mysqli);
      while($row=mysqli_fetch_assoc($resultado)){
     ?>
     <tr>
       <th scope="row"> <?php echo $row['nome']; ?></th>
       <td><?php echo $row['email']; ?></td>
-      <td><?php echo $row['IdTipoUsuario']; ?></td>
+      <td><?php echo $row['tipousuario']; ?></td>
       <td><button type="button" class="btn btn-danger">Inativar</button></td>
     </tr>
     <?php
