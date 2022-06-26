@@ -14,6 +14,7 @@
             $_SESSION['nome'] = $row['nome'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['id'] = $row['Idsuario'];
+            $_SESSION[id] = $row['idTipoUsuario'];
             if($row['idTipoUsuario']= 1 || $row['idTipoUsuario']= 2) 
              header("Location: admin.php");
              else
