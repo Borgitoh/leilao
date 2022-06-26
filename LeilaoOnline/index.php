@@ -36,6 +36,11 @@ session_start();
         <a class="nav-link" href="login.php">Login</a>
       </li>
       <?php }?>
+      <?php   if($_SESSION['idTipoUsario']){?>
+      <li class="nav-item">
+        <a class="nav-link" href="php/sair.php?sessao=sim">Sair</a>
+      </li>
+      <?php }?>
     </ul>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Procurar">
