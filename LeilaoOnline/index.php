@@ -31,12 +31,12 @@ session_start();
        <li class="nav-item">
         <a class="nav-link">Resultado</a>
       </li>
-      <?php   if( !$_SESSION['idTipoUsario']){?>
+      <?php   if( isset($_SESSION['idTipoUsario'])){?>
       <li class="nav-item">
         <a class="nav-link" href="login.php">Login</a>
       </li>
       <?php }?>
-      <?php   if($_SESSION['idTipoUsario']){?>
+      <?php   if(!isset($_SESSION['idTipoUsario'])){?>
       <li class="nav-item">
         <a class="nav-link" href="php/sair.php?sessao=sim">Sair</a>
       </li>

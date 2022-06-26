@@ -1,9 +1,5 @@
 <?php
- 
-if (isset($_GET['sessao'])){
+
     session_destroy();
-}
- if(!$_SESSION['nome']){
-        header("Location: ../index.php");
-      }
+    header("Location: ../index.php");
 ?>

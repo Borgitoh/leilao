@@ -58,7 +58,7 @@ include "conexao.php";
              }
             ?>
             <?php 
-             if(!$_SESSION['idTipoUsario']){
+             if(!isset($_SESSION['idTipoUsario'])){
             ?>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro"
                 value="Cadastro">Cadastro</button>

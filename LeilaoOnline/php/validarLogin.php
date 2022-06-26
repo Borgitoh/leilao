@@ -25,8 +25,8 @@
         else {
             unset($_SESSION['nome']);
             unset($_SESSION['email']);
-            unset($_SESSION['id']);
-            unset($_SESSION['cargo']);
+            unset( $_SESSION['idusuario']);
+            unset(  $_SESSION['idTipoUsario']);
             header("Location: ../login.php?msg=LOGIN_ERROR");}
         }else{
             header("Location: login.php?msg=ERRO");

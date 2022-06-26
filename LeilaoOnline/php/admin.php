@@ -1,6 +1,8 @@
 <?php
 session_start();
-include 'sair.php'
+include 'sair.php';
+include 'validasessao.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
