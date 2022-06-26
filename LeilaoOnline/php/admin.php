@@ -27,6 +27,7 @@ include 'validasessao.php';
      <li class="nav-item">
         <a class="nav-link" href="../index.php">Incio</a>
       </li>
+      <?php   if($_SESSION['idTipoUsario'] !=2 ){?>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Funcionario
@@ -36,6 +37,7 @@ include 'validasessao.php';
           <a class="dropdown-item" href="ListarFuncionario.php">Listar</a>
         </div>
       </li>
+      <?php  }?>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Produto
