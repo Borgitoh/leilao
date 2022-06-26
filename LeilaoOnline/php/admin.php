@@ -33,7 +33,7 @@ include 'validasessao.php';
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="CriarConta.php">Cadastrar</a>
-          <a class="dropdown-item" href="#">Listar</a>
+          <a class="dropdown-item" href="ListarFuncionario.php">Listar</a>
         </div>
       </li>
       <li class="nav-item dropdown">

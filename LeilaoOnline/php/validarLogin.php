@@ -51,11 +51,10 @@ if(isset($_POST['CadastroFu'])){
         $senha = $_POST['senha'];
         $tipo  = $_POST['funcionario'] ;
 
-        echo   $tipo;
-//         $sql = "INSERT INTO usuario (nome,email,senha,IdTipoUsuario) 
-//         VALUES('$nome','$email','$senha','3')";
-//       $resultado=mysqli_query($con,$sql);
-//       header('location: admin.php');
+        $sql = "INSERT INTO usuario (nome,email,senha,IdTipoUsuario) 
+        VALUES('$nome','$email','$senha','$tipo')";
+      $resultado=mysqli_query($con,$sql);
+      header('location: admin.php');
 }
 
 ?>
