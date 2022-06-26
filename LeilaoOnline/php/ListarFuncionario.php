@@ -26,7 +26,7 @@ include "conexao.php";
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
      <li class="nav-item">
-        <a class="nav-link" href="../index.php">Incio</a>
+        <a class="nav-link" href="admin.php">Incio</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
