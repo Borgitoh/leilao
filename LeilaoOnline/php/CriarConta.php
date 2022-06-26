@@ -24,7 +24,7 @@ include "conexao.php";
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <form class="form-signin text-center" action="validarLogin.php" method="post">
             <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
                 height="72">
@@ -39,7 +39,7 @@ include "conexao.php";
             <label for="inputPassword" class="sr-only">Confirmar a Senha</label>
             <input type="password" name="senhaC" class="form-control mt-3" placeholder="Confirmar a senha" required>
             <?php
-              if(!empty( $_SESSION['idTipoUsario']  == 1)){
+              if(isset($_SESSION['idTipoUsario']) && $_SESSION['idTipoUsario'] == 1){
                 $sql="SELECT*FROM `tipousuario` WHERE nome != 'Usuario' ";
                 $resultado=mysqli_query($con,$sql);  
             ?>
