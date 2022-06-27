@@ -13,7 +13,10 @@ include "conexao.php";
     <title>leilao</title>
      <link rel="stylesheet" href="../css/bootstrap.min.css">
      <link rel="stylesheet" href="../css/style.css">
-</head>
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+</head>">
+     
 <body>
  
     <!-- incio do nav bar -->
@@ -63,15 +66,15 @@ include "conexao.php";
 <!-- tabela dos funcionario-->
 <div class="container-fluid mt-5">
     <div class="container mt-5">
-    <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Email</th>
-      <th scope="col">Categoria</th>
-      <th scope="col">Acçoes</th>
-    </tr>
-  </thead>
+    <table class="table table-striped"  id="example2" >
+                <thead>
+                    <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Acçoes</th>
+                    </tr>
+                </thead>
   <tbody>
     <?php
       $id = $_SESSION['idusuario'];
@@ -92,15 +95,25 @@ include "conexao.php";
      }
     ?>
   </tbody>
-</table>
+ </table>
+
+ 
     </div>
 </div>
 
 <!-- Fim da Tablea do Funcionario -->
-
 <script src="../js/Jquery.js" ></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/popover.js"></script>
+<script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
+<script>
+$(document).ready(function () {
+    $('#example2').DataTable();
+});
+</script>
+
 <!-- foooter -->
 
 <footer class="text-muted mt-5">
