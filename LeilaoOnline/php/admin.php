@@ -16,7 +16,7 @@ include 'validasessao.php';
 <body>
  
     <!-- incio do nav bar -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-dark top-bar-container">
   <a class="navbar-brand" href="#"> <?php echo $_SESSION['nome']; ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,16 +25,16 @@ include 'validasessao.php';
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
      <li class="nav-item">
-        <a class="nav-link" href="../index.php">Incio</a>
+        <a class=" text-white nav-link" href="../index.php">Incio</a>
       </li>
       <?php   if($_SESSION['idTipoUsario'] !=2 ){?>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class=" text-white nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Funcionario
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="CriarConta.php">Cadastrar</a>
-          <a class="dropdown-item" href="ListarFuncionario.php">Listar</a>
+          <a class=" text-white dropdown-item" href="CriarConta.php">Cadastrar</a>
+          <a class="text-white dropdown-item" href="ListarFuncionario.php">Listar</a>
         </div>
       </li>
       <?php  }?>
@@ -42,16 +42,16 @@ include 'validasessao.php';
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Produto
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Cadastrar</a>
-          <a class="dropdown-item" href="#">Listar</a>
+        <div class=" text-white dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="text-white dropdown-item" href="#">Cadastrar</a>
+          <a class="text-white dropdown-item" href="#">Listar</a>
         </div>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="../resultado.php">Resultado</a>
+        <a class=" text-white nav-link" href="../resultado.php">Resultado</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="sair.php?sessao=sim">Sair</a>
+        <a class="text-white nav-link" href="sair.php?sessao=sim">Sair</a>
       </li>
     </ul>
     <form class="form-inline">

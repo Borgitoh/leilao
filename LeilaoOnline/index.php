@@ -9,12 +9,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>leilao</title>
      <link rel="stylesheet" href="css/bootstrap.min.css">
-
+     <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
  
     <!-- incio do nav bar -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-dark  top-bar-container">
   <a class="navbar-brand" href="leilao.php">Leilão</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,23 +22,23 @@ session_start();
 
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
-     <li class="nav-item">
-        <a class="nav-link">Incio</a>
+     <li class=" nav-item">
+        <a class="text-white nav-link">Incio</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">Sobre</a>
+      <li class=" nav-item">
+        <a class=" text-white nav-link">Sobre</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link">Resultado</a>
+        <a class="text-white nav-link">Resultado</a>
       </li>
       <?php   if( empty($_SESSION['idTipoUsario'])){?>
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
+      <li class="  nav-item">
+        <a class="  text-white nav-link" href="login.php">Login</a>
       </li>
       <?php }?>
       <?php   if(!empty($_SESSION['idTipoUsario'])){?>
       <li class="nav-item">
-        <a class="nav-link" href="php/sair.php">Sair</a>
+        <a class=" text-white nav-link" href="php/sair.php">Sair</a>
       </li>
       <?php }?>
     </ul>
