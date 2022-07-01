@@ -12,6 +12,7 @@ include 'validasessao.php';
     <title>leilao</title>
      <link rel="stylesheet" href="../css/bootstrap.min.css">
      <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="../css/menu.css">
 </head>
 <body>
  
