@@ -33,7 +33,7 @@ include 'validasessao.php';
         <a class=" text-white nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Funcionario
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="top-bar-container dropdown-menu " aria-labelledby="navbarDropdown">
           <a class=" text-white dropdown-item" href="CriarConta.php">Cadastrar</a>
           <a class="text-white dropdown-item" href="ListarFuncionario.php">Listar</a>
         </div>
@@ -43,7 +43,7 @@ include 'validasessao.php';
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Produto
         </a>
-        <div class=" text-white dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="top-bar-container  dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="text-white dropdown-item" href="#">Cadastrar</a>
           <a class="text-white dropdown-item" href="#">Listar</a>
         </div>
