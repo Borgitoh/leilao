@@ -61,7 +61,7 @@ include "conexao.php";
                 <?php
      
                   $mysqli= "SELECT produto.nome, produto.imagem, produto.descricao, produto.dataInicial , 
-                  produto.dataFinal ,situacao.nome as situacao FROM produto 
+                  produto.dataFinal, produto.preco ,situacao.nome as situacao FROM produto 
                   INNER JOIN situacao ON produto.situacao = situacao.idSituacao ORDER by 1 DESC ";
                   $resultado=mysqli_query($con,$mysqli);
                   while($row=mysqli_fetch_assoc($resultado)){
@@ -73,7 +73,8 @@ include "conexao.php";
                             <img  class="bd-placeholder-img card-img-top" 
                             width="100%" height="225"src=" <?php echo $row['imagem']; ?>" />
                         <div class="card-body">
-                            <p class="card-text"><?php echo $row['descricao']; ?></p>
+                            <p class="card-text"><?php echo $row['nome']; ?></p>
+                            <p class="card-text"> Preço: <?php echo $row['preco']; ?></p>
                             <p class="card-text"> Data Inicio: <?php echo $row['dataInicial']; ?></p>
                             <p class="card-text">Data Final :<?php echo $row['dataFinal']; ?></p>
                             <div class="d-flex justify-content-between align-items-center">
