@@ -36,18 +36,18 @@ include "conexao.php";
         <a class=" top-bar-container nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Funcionario
         </a>
-        <div class=" text-white dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class=" top-bar-container dropdown-menu" aria-labelledby="navbarDropdown">
           <a class=" text-white dropdown-item" href="CriarConta.php">Cadastrar</a>
-          <a class=" text-white dropdown-item" href="#">Listar</a>
+          <a class=" text-white dropdown-item" href="ListarFuncionario.php">Listar</a>
         </div> 
       </li>
       <li class="nav-item dropdown">
         <a class=" top-bar-container  nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Produto
         </a>
-        <div class=" text-white dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class=" top-bar-container dropdown-menu" aria-labelledby="navbarDropdown">
           <a class=" text-white dropdown-item" href="CadastroProduto.php">Cadastrar</a>
-          <a class="text-white dropdown-item" href="ListarProduto.php">Listar</a>
+          <a class="text-white dropdown-item" href="">Listar</a>
         </div>
       </li>
        <li class="nav-item">
@@ -70,26 +70,33 @@ include "conexao.php";
     <table class="table table-striped"  id="example2" >
                 <thead>
                     <tr>
+                    <th scope="col">Imagem</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Acçoes</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Data Inicial</th>
+                    <th scope="col">Data Final</th>
+                    <th scope="col">Data Situação</th>
+                    <th scope="col">Acções</th>
                     </tr>
                 </thead>
   <tbody>
     <?php
-      $id = $_SESSION['idusuario'];
-      $mysqli= "SELECT usuario.nome, usuario.email, tipousuario.nome as tipousuario  
-        FROM `usuario` INNER JOIN tipousuario 
-        ON usuario.IdTipoUsuario = tipousuario.IdTipoUsuario
-         WHERE Idusario != '$id'ORDER by 1 desc ";
+     
+      $mysqli= "SELECT produto.nome, produto.imagem, produto.descricao, produto.dataInicial , 
+      produto.dataFinal ,situacao.nome as situacao FROM produto 
+      INNER JOIN situacao ON produto.situacao = situacao.idSituacao ORDER by 1 DESC ";
      $resultado=mysqli_query($con,$mysqli);
      while($row=mysqli_fetch_assoc($resultado)){
     ?>
     <tr>
+     <th scope="row"><img id="output_image" src=" <?php echo $row['imagem']; ?>"
+                    width="200" height="100" /></th>
       <th scope="row"> <?php echo $row['nome']; ?></th>
-      <td><?php echo $row['email']; ?></td>
-      <td><?php echo $row['tipousuario']; ?></td>
+      <td><?php echo $row['descricao']; ?></td>
+      <td><?php echo $row['dataInicial']; ?></td>
+      <td><?php echo $row['dataFinal']; ?></td>
+      <td><?php echo $row['situacao']; ?></td>
+      
       <td><button type="button" class="btn btn-danger">Inativar</button></td>
     </tr>
     <?php

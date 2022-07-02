@@ -44,8 +44,8 @@ include 'validasessao.php';
          Produto
         </a>
         <div class="top-bar-container  dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="text-white dropdown-item" href="#">Cadastrar</a>
-          <a class="text-white dropdown-item" href="#">Listar</a>
+          <a class="text-white dropdown-item" href="CadastroProduto.php">Cadastrar</a>
+          <a class="text-white dropdown-item" href="ListarProduto.php">Listar</a>
         </div>
       </li>
        <li class="nav-item">

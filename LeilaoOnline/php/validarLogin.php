@@ -57,4 +57,28 @@ if(isset($_POST['CadastroFu'])){
       header('location: admin.php');
 }
 
+if(isset($_POST['Produto'])){
+   
+  $nome = $_POST['nome'];
+  $descricao = $_POST['descricao'];
+  $preco = $_POST['preco'];
+  $datainicial  = $_POST['datainicial'] ;
+  $datafinal  = $_POST['datafinal'] ;
+
+  $uploaddir = '../imgProduto/';
+  $imagem = $uploaddir . $_FILES['foto']['name'] = $nome.'.png';
+
+
+  if (move_uploaded_file($_FILES['foto']['tmp_name'], $imagem)) {
+    $sql = "INSERT INTO produto (nome,descricao,preco,datainicial,datafinal,imagem,situacao) 
+    VALUES('$nome','$descricao','$preco','$datainicial','$datafinal','$imagem','1')";
+    $resultado=mysqli_query($con,$sql);
+    header('location: ListarProduto.php');
+} else {
+    echo "Possível ataque de upload de arquivo!\n";
+}
+
+
+}
+
 ?>
