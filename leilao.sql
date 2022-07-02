@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Jul-2022 às 21:09
+-- Tempo de geração: 02-Jul-2022 às 00:24
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -34,13 +34,21 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `protocolo` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) DEFAULT NULL,
   `descricao` varchar(255) DEFAULT NULL,
-  `dataInicial` varchar(255) DEFAULT NULL,
-  `dataFinal` varchar(255) DEFAULT NULL,
+  `dataInicial` date DEFAULT NULL,
+  `dataFinal` date DEFAULT NULL,
   `situacao` int(11) NOT NULL,
   `preco` double DEFAULT NULL,
+  `imagem` varchar(9000) DEFAULT NULL,
   PRIMARY KEY (`protocolo`),
   KEY `situacao` (`situacao`)
-) ENGINE=MyISAM AUTO_INCREMENT=12346 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12347 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`protocolo`, `nome`, `descricao`, `dataInicial`, `dataFinal`, `situacao`, `preco`, `imagem`) VALUES
+(12346, 'sadas', 'sadasd', '2022-07-21', '2022-06-29', 1, 13314314, '../imgProduto/sadas.png');
 
 -- --------------------------------------------------------
 
