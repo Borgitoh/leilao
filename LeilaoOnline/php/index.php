@@ -38,7 +38,7 @@ include "conexao.php";
                 </li>
                 <?php   if( empty($_SESSION['idTipoUsario'])){?>
                 <li class="  nav-item">
-                    <a class="  text-white nav-link" href="login.php">Login</a>
+                    <a class="  text-white nav-link" href="../login.php">Login</a>
                 </li>
                 <?php }?>
                 <?php   if(!empty($_SESSION['idTipoUsario'])){?>
