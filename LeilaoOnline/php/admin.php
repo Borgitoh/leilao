@@ -29,7 +29,7 @@ include "conexao.php";
      <li class="nav-item">
         <a class=" text-white nav-link" href="/index.php">Incio</a>
       </li>
-      <?php   if($_SESSION['idTipoUsario'] !=2 ){?>
+      <?php   if($_SESSION['idTipoUsario'] ==1 ){?>
       <li class="nav-item dropdown">
         <a class=" text-white nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Funcionario
