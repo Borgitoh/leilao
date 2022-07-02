@@ -62,7 +62,7 @@ include "conexao.php";
             ?>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" name="Cadastro"
                 value="Cadastro">Cadastro</button>
-            <p class="mt-5 mb-3"><a href="../index.php">Voltar</a></p>
+            <p class="mt-5 mb-3"><a href="index.php">Voltar</a></p>
             <?php 
              }
             ?>

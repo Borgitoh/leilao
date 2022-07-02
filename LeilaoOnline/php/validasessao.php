@@ -1,5 +1,5 @@
 <?php
  if(!$_SESSION['nome']){
-        header("Location: ../index.php");
+        header("Location: index.php");
       }
 ?>
