@@ -80,7 +80,7 @@ if(isset($_POST['Produto'])){
 
     $resultado=mysqli_query($con,$sql);
     echo  $resultado; 
-    // header('location: ListarProduto.php');
+    header('location: ListarProduto.php');
 } else {
     echo "Possível ataque de upload de arquivo!\n";
 }
