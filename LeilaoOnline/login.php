@@ -45,7 +45,7 @@
             required>
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="login" valeu="login">Sign in</button>
         <p class="mt-5 mb-3"><a href="php/CriarConta.php">Criar uma conta</a></p>
-        <p class="mt-5 mb-3"><a href="index.php">Voltar</a></p>
+        <p class="mt-5 mb-3"><a href="php/index.php">Voltar</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
     </form>
     </div>
