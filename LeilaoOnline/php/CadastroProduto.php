@@ -32,14 +32,14 @@ include "conexao.php";
             <!-- <img class="mb-4" id="blah" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt=""
                 width="72" height="72"> -->
             <label for="foto">
-                <img id="output_image"  class="mt-5" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+                <img id="output_image"  class="mt-5" src="../img/bootstrap-solid.svg"
                     width="200" height="100" />
             </label>
             <input type="file" class="d-none" id="foto" name="foto" accept="image/*" onchange="preview_image(event)">
 
             <h1 class="h3 mb-3 font-weight-normal">Produto</h1>
             <label for="inputEmail" class="sr-only">Nome</label>
-            <input type="text" name="nome" class="form-control" placeholder="Digite seu Nome" required autofocus>
+            <input type="text" name="nome" class="form-control" placeholder="Produto" required autofocus>
             <textarea class="form-control mt-3" placeholder="Descrição" name='descricao' require
                 id="exampleFormControlTextarea1" rows="3"></textarea>
             <label for="inputPassword" class="sr-only ">Preço</label>

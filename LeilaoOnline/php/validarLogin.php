@@ -70,10 +70,17 @@ if(isset($_POST['Produto'])){
 
 
   if (move_uploaded_file($_FILES['foto']['tmp_name'], $imagem)) {
-    $sql = "INSERT INTO produto (nome,descricao,preco,datainicial,datafinal,imagem,situacao) 
-    VALUES('$nome','$descricao','$preco','$datainicial','$datafinal','$imagem','1')";
+    $sql = "
+    
+    INSERT INTO `produto` ( `nome`, `descricao`, `dataInicial`, `dataFinal`, `situacao`, 
+    `preco`, `imagem`) VALUES ( '$nome', '$descricao', '$datainicial', '$datafinal', '1', '$preco', 
+    '$imagem');
+    
+    ";
+
     $resultado=mysqli_query($con,$sql);
-    header('location: ListarProduto.php');
+    echo  $resultado; 
+    // header('location: ListarProduto.php');
 } else {
     echo "Possível ataque de upload de arquivo!\n";
 }
