@@ -43,7 +43,7 @@ include "conexao.php";
                 <?php }?>
                 <?php   if(!empty($_SESSION['idTipoUsario'])){?>
                 <li class="nav-item">
-                    <a class=" text-white nav-link" href="php/sair.php">Sair</a>
+                    <a class=" text-white nav-link" href="sair.php">Sair</a>
                 </li>
                 <?php }?>
             </ul>
