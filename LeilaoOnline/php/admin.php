@@ -27,7 +27,7 @@ include "conexao.php";
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
      <li class="nav-item">
-        <a class=" text-white nav-link" href="../index.php">Incio</a>
+        <a class=" text-white nav-link" href="/index.php">Incio</a>
       </li>
       <?php   if($_SESSION['idTipoUsario'] !=2 ){?>
       <li class="nav-item dropdown">
