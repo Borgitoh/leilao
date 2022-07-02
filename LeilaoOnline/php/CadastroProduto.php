@@ -43,7 +43,7 @@ include "conexao.php";
             <textarea class="form-control mt-3" placeholder="Descrição" name='descricao' require
                 id="exampleFormControlTextarea1" rows="3"></textarea>
             <label for="inputPassword" class="sr-only ">Preço</label>
-            <input type="text" name="preco" class="form-control mt-3"  max="9"placeholder="Preço" required>
+            <input type="number" name="preco" class="form-control mt-3"  maxlength="10"placeholder="Preço" required>
             <label for="inputPassword" class="sr-only ">Data Inicial</label>
             <input type="text" onfocus="(this.type='date')" name="datainicial" class="form-control mt-3" placeholder="Data Inicial" required>
             <label for="inputPassword" class="sr-only ">Data Final</label>
